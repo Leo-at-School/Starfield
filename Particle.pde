@@ -5,8 +5,7 @@ public class Particle{
   private double maxSpeedTime = 20;
   
   //Set by constructor
-  protected double x, y, startTime;
-  private double distance, radius, speed, angle;
+  private double distance, radius, speed, angle, x, y, startTime;;
   private color particleColor;
   
   Particle(double initX, double initY, double initSpeed, double initAngle, double initStartTime){
@@ -67,5 +66,17 @@ public class Particle{
       fill(particleColor);
       ellipse((float)x, (float)y, (float)(radius), (float)(radius));
     }
+  }
+  
+  public double getX(){
+    return x;
+  }
+  
+  public double getY(){
+    return y;
+  }
+  
+  public double getStartTime(){
+    return startTime;
   }
 }

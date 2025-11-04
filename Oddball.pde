@@ -4,11 +4,15 @@ public class Oddball extends Particle{
   private double maxRadius = Math.sqrt(width*width + height*height);
   
   //Set by constructor
-  private double radius;
+  private double radius, x, y, startTime;
   private color oddballColor;
   
   Oddball(double initX, double initY, double initStartTime, color initOddballColor){
     super(initX, initY, 0, 0, initStartTime);
+    x = super.getX();
+    y = super.getY();
+    startTime = super.getStartTime();
+    
     
     oddballColor = initOddballColor;
   }
